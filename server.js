@@ -1,15 +1,15 @@
 const express = require('express')
 const app = express()
-const connectDb = require('../server/database/connect')
+const connectDb = require('./database/connect')
 const cors = require('cors')
 const bodyparser = require('body-parser')
 const cookieParser = require('cookie-parser')
-
+  
 
 connectDb()
 
 app.use(cors({
-    origin:['http://localhost:3000'],
+    origin:['http://localhost:3000','https://master.d35czh5kpusu7z.amplifyapp.com'],
     credentials:true,
     methods:['GET','POST','PUT','DELETE','PATCH']
 }))
